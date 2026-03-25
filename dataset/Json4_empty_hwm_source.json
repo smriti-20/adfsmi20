@@ -1,0 +1,22 @@
+{
+	"name": "Json4_empty_hwm_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "empty_hwm_source_data",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "empty_json.json",
+				"fileSystem": "main"
+			}
+		},
+		"schema": {
+			"type": "object"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

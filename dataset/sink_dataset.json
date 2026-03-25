@@ -1,0 +1,20 @@
+{
+	"name": "sink_dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sink_copy_services",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "directory",
+				"fileSystem": "main"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

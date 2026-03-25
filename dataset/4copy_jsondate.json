@@ -1,0 +1,27 @@
+{
+	"name": "4copy_jsondate",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "4copy_json_dataservies",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "hwm.json",
+				"fileSystem": "main"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"last_updated_date": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

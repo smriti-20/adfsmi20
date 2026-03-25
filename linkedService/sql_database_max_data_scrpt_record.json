@@ -1,0 +1,17 @@
+{
+	"name": "sql_database_max_data_scrpt_record",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "anvitserver.database.windows.net",
+			"database": "yashdatabase",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "anvitadmin",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEU2QjZBRTc0LUM0QjUtNENDMy04NDk3LUYxRjI0REZBNjE1OV9mMTg1YTMxMS03NDFiLTQ5MTgtOTU2My05ZGJmNjhlZDY5MjUiDQp9"
+		}
+	}
+}

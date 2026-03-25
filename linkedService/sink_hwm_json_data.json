@@ -1,0 +1,12 @@
+{
+	"name": "sink_hwm_json_data",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://fruitvilla.dfs.core.windows.net/",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEU2QjZBRTc0LUM0QjUtNENDMy04NDk3LUYxRjI0REZBNjE1OV9iNjIxNjhhMy05MWU5LTQ5YWQtOWM0Zi02NTcwNDg3YjI5ODAiDQp9"
+		}
+	}
+}

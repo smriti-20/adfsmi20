@@ -1,0 +1,27 @@
+{
+	"name": "hmw_json_data_sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "hwm_sink_copy_services_",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "hwm.json",
+				"fileSystem": "set"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"last_updated_date": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

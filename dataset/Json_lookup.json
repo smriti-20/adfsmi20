@@ -1,0 +1,27 @@
+{
+	"name": "Json_lookup",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "pipe3_lookup_json_hwm",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "hwm.json",
+				"container": "main"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"last_updated_date": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

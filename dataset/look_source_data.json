@@ -1,0 +1,27 @@
+{
+	"name": "look_source_data",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "look_linked_data",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "hwm.json",
+				"fileSystem": "set"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"last_updated_date": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
