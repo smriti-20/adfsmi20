@@ -1,0 +1,19 @@
+{
+	"name": "Json5_union_ds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_json_dataflow5",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "uniondataflow"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

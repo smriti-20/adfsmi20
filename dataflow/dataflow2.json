@@ -1,0 +1,74 @@
+{
+	"name": "dataflow2",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "ds_csv_source",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "ds_sink_data",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "derivedColumn1"
+				},
+				{
+					"name": "select1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          Index as string,",
+				"          Name as string,",
+				"          Description as string,",
+				"          Brand as string,",
+				"          Category as string,",
+				"          Price as string,",
+				"          Currency as string,",
+				"          Stock as string,",
+				"          EAN as string,",
+				"          Color as string,",
+				"          Size as string,",
+				"          Availability as string,",
+				"          {Internal ID} as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 derive({Full name} = Name+{Internal ID}) ~> derivedColumn1",
+				"derivedColumn1 select(mapColumn(",
+				"          Index,",
+				"          Name,",
+				"          Category,",
+				"          Price,",
+				"          Color,",
+				"          Size,",
+				"          Availability,",
+				"          {Full name}",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1",
+				"select1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1"
+			]
+		}
+	}
+}

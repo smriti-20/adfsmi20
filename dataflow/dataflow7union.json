@@ -1,0 +1,66 @@
+{
+	"name": "dataflow7union",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "ds_mumbai",
+						"type": "DatasetReference"
+					},
+					"name": "Mumbai"
+				},
+				{
+					"dataset": {
+						"referenceName": "ds_pune",
+						"type": "DatasetReference"
+					},
+					"name": "Pune"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "sink_union",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "union1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          ID as integer,",
+				"          Name as string,",
+				"          Salary as decimal(10,2)",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     format: 'table') ~> Mumbai",
+				"source(output(",
+				"          ID as integer,",
+				"          Name as string,",
+				"          Salary as decimal(10,2)",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     format: 'table') ~> Pune",
+				"Mumbai, Pune union(byName: true)~> union1",
+				"union1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1"
+			]
+		}
+	}
+}

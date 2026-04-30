@@ -1,0 +1,37 @@
+{
+	"name": "ds_copy_switch_daysdata",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_data_days",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "day.csv",
+				"fileSystem": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Numeric",
+				"type": "String"
+			},
+			{
+				"name": "Numeric-2",
+				"type": "String"
+			},
+			{
+				"name": "Numeric-Suffix",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

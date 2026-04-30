@@ -2,16 +2,16 @@
 	"name": "DelimitedText2",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureBlobStorage1",
+			"referenceName": "AzureDataLakeStorage2",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobStorageLocation",
-				"fileName": "customers-100.csv",
-				"container": "input"
+				"type": "AzureBlobFSLocation",
+				"fileName": "day_1",
+				"fileSystem": "input"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
@@ -20,51 +20,15 @@
 		},
 		"schema": [
 			{
-				"name": "Index",
+				"name": "Numeric",
 				"type": "String"
 			},
 			{
-				"name": "Customer Id",
+				"name": "Numeric-2",
 				"type": "String"
 			},
 			{
-				"name": "First Name",
-				"type": "String"
-			},
-			{
-				"name": "Last Name",
-				"type": "String"
-			},
-			{
-				"name": "Company",
-				"type": "String"
-			},
-			{
-				"name": "City",
-				"type": "String"
-			},
-			{
-				"name": "Country",
-				"type": "String"
-			},
-			{
-				"name": "Phone 1",
-				"type": "String"
-			},
-			{
-				"name": "Phone 2",
-				"type": "String"
-			},
-			{
-				"name": "Email",
-				"type": "String"
-			},
-			{
-				"name": "Subscription Date",
-				"type": "String"
-			},
-			{
-				"name": "Website",
+				"name": "Numeric-Suffix",
 				"type": "String"
 			}
 		]

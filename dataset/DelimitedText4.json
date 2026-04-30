@@ -2,16 +2,16 @@
 	"name": "DelimitedText4",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureBlobStorage2",
+			"referenceName": "AzureDataLakeStorage4",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobStorageLocation",
-				"fileName": "customers-100.csv",
-				"container": "input"
+				"type": "AzureBlobFSLocation",
+				"fileName": "edu_cation",
+				"fileSystem": "input"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
@@ -20,51 +20,7 @@
 		},
 		"schema": [
 			{
-				"name": "Index",
-				"type": "String"
-			},
-			{
-				"name": "Customer Id",
-				"type": "String"
-			},
-			{
-				"name": "First Name",
-				"type": "String"
-			},
-			{
-				"name": "Last Name",
-				"type": "String"
-			},
-			{
-				"name": "Company",
-				"type": "String"
-			},
-			{
-				"name": "City",
-				"type": "String"
-			},
-			{
-				"name": "Country",
-				"type": "String"
-			},
-			{
-				"name": "Phone 1",
-				"type": "String"
-			},
-			{
-				"name": "Phone 2",
-				"type": "String"
-			},
-			{
-				"name": "Email",
-				"type": "String"
-			},
-			{
-				"name": "Subscription Date",
-				"type": "String"
-			},
-			{
-				"name": "Website",
+				"name": "Education",
 				"type": "String"
 			}
 		]

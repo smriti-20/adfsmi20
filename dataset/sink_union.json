@@ -1,0 +1,19 @@
+{
+	"name": "sink_union",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_union",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "unioncity"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,32 @@
+{
+	"name": "ds_empdept_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sql_ds_empdept",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "EmployeeId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "dept",
+				"type": "varchar"
+			},
+			{
+				"name": "salary",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "EmpDept"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -2,15 +2,15 @@
 	"name": "Json1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureBlobStorage1",
+			"referenceName": "json_join_sink",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "Json",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobStorageLocation",
-				"container": "output"
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "join1"
 			}
 		},
 		"schema": {}

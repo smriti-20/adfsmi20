@@ -1,0 +1,20 @@
+{
+	"name": "ds_sink_cust_json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_cust_json",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "destination",
+				"fileSystem": "main"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

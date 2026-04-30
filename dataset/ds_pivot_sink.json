@@ -1,0 +1,24 @@
+{
+	"name": "ds_pivot_sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_pivot_sink",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "ouput",
+				"fileSystem": "pivot"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

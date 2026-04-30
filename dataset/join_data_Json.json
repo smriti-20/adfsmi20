@@ -1,0 +1,19 @@
+{
+	"name": "join_data_Json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_join_datajson",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "joindataflow"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

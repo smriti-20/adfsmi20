@@ -1,0 +1,33 @@
+{
+	"name": "ds_pune",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_pune",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Name",
+				"type": "varchar"
+			},
+			{
+				"name": "Salary",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 2
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Pune"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

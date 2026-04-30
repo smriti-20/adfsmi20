@@ -1,0 +1,27 @@
+{
+	"name": "ds_sql_department",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_depat_data_sql",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "DeptID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Post",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Department"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

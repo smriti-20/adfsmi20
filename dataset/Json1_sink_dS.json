@@ -1,0 +1,19 @@
+{
+	"name": "Json1_sink_dS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Ls_dta_sink",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "dataflow"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,28 @@
+{
+	"name": "dept_ds_sql",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_dept_sqldata",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Department",
+				"type": "varchar"
+			},
+			{
+				"name": "Salary",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 2
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "DEPT"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

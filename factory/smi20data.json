@@ -1,0 +1,15 @@
+{
+	"name": "smi20data",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Enabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "07893251-991c-4150-8f58-8bb564b013d1",
+		"tenantId": "ea1eab8a-a8f5-4cbb-8c96-0c0b6180bc6d"
+	}
+}
